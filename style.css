@@ -99,7 +99,8 @@ span {
   color: #7b8bad;
   font-size: 16px;
   font-weight: 700;
-  line-height: 26px;
+  display: flex;
+  align-items: center;
 }
 
 .imgone {
