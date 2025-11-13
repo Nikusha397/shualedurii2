@@ -3,7 +3,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 body {
@@ -27,6 +26,7 @@ body {
   gap: 50px;
   align-content: center;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .box_1 {
@@ -40,8 +40,6 @@ body {
   color: white;
   width: 35px;
   height: 40px;
-  width: 19;
-  height: 11;
   display: flex;
   padding-left: 5px;
 }
@@ -53,32 +51,27 @@ body {
   flex-wrap: wrap;
 }
 
-.button1 {
+.button1,
+.button2 {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 175px;
   height: 58px;
   border-radius: 8px;
-  background-color: #e8eff2;
   border: none;
-  justify-content: center;
-  color: #162542;
   font-size: 16px;
   font-weight: 700;
 }
 
+.button1 {
+  background-color: #e8eff2;
+  color: #162542;
+}
+
 .button2 {
-  display: flex;
-  align-items: center;
-  width: 175px;
-  height: 58px;
-  border-radius: 8px;
   background-color: #f16718;
-  border: none;
-  justify-content: center;
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
 }
 
 h1 {
@@ -99,6 +92,8 @@ p {
 .line_one {
   display: flex;
   gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 100px;
 }
 
 span {
@@ -114,6 +109,8 @@ span {
   height: 480px;
   border-radius: 15px;
   display: flex;
+  max-width: 100%;
+  height: auto;
 }
 
 .graybox {
@@ -125,8 +122,7 @@ span {
   position: absolute;
   opacity: 1;
   top: 110px;
-  left: 1050px;
-  border-radius: 20px;
+  left: 1170px;
 }
 
 .mainthree {
@@ -135,6 +131,7 @@ span {
   align-items: flex-start;
   margin-top: 120px;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .compatibility,
@@ -144,6 +141,7 @@ span {
   display: flex;
   flex-direction: column;
   width: 255px;
+  gap: 10px;
 }
 
 .iconbox {
@@ -187,24 +185,49 @@ h2 {
   opacity: 1;
   top: 875px;
   left: -300px;
-  border-radius: 20px;
 }
 
 .imgs {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .imgtwo {
   width: 255px;
   height: 480px;
   border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.button1:hover {
+  background-color: #162542;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button2:hover {
+  background-color: #ff9b62;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .imgthree {
   width: 445px;
   height: 480px;
   border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.headone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 60px;
 }
 
 .headtwo {
@@ -214,34 +237,294 @@ h2 {
   flex-wrap: wrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) and (min-width: 600px) {
+  body {
+    padding: 40px;
+  }
+
+  .firstkeyboard {
+    display: flex;
+    align-items: end;
+  }
+
+  .main_box {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .box_1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .box_ {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .TM {
+    width: 35px;
+    height: 10px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button1 {
+    width: 175px;
+    height: 58px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .line_one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .text_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    max-width: 400px;
+  }
+
+  .text_section h1 {
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 900;
+  }
+
+  .text_section p {
+    font-size: 17px;
+    line-height: 26px;
+    color: #7b8bad;
+    text-align: left;
+  }
+
+  .text_section .buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .text_section span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #7b8bad;
+  }
+
+  .imgone {
+    max-width: 420px;
+    border-radius: 15px;
+  }
+
+  .graybox,
+  .graybox_two {
+    display: none;
+  }
+
+  .imgs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .imgtwo {
+    width: 40%;
+    border-radius: 15px;
+  }
+
+  .imgthree {
+    width: 55%;
+    border-radius: 15px;
+  }
+
+  .headtwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .headtwo h2 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 900;
+    max-width: 260px;
+    text-align: left;
+  }
+
+  .headtwo p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #7b8bad;
+    max-width: 420px;
+    text-align: left;
+  }
+
+  .mainthree {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 60px;
+    justify-items: start;
+    align-items: start;
+    margin-top: 80px;
+  }
+
+  .compatibility,
+  .wireless,
+  .battery,
+  .rgb {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .iconbox {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+    background-color: #f16718;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 26px;
+    color: #162542;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: #7b8bad;
+  }
+}
+
+@media (max-width: 599px) and (min-width: 350px) {
+  body {
+    padding: 10px;
+  }
+
+  .main_box {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .box_1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
   h1 {
     font-size: 32px;
     line-height: 36px;
+    text-align: center;
   }
 
   p {
     font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .line_one {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
 
   .button1,
   .button2 {
     width: 100%;
-    max-width: 250px;
+    max-width: 260px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .imgone {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
   }
 
   .imgs {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+  }
+
+  .imgtwo,
+  .imgthree {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .graybox,
+  .graybox_two {
+    display: none;
+  }
+
+  .headtwo {
+    text-align: center;
+    justify-content: center;
   }
 
   .mainthree {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
-  .graybox,
-  .graybox_two {
-    display: none !important;
+  .compatibility,
+  .wireless,
+  .battery,
+  .rgb {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
   }
 }
